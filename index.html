@@ -978,6 +978,12 @@
 
   .school-item .product-visual {
     aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+
+  .school-item .product-photo {
+    transform: scale(1.15);
+    transform-origin: center 48%;
   }
 
   .school-badge { background: var(--forest); }
@@ -1009,15 +1015,38 @@
     .nav-hamburger { display: flex; }
     .nav-logo { font-size: 0.9rem; letter-spacing: 0.1em; }
 
-    /* HERO */
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 5.5rem 1.25rem 2.5rem; }
-    .hero-headline { font-size: clamp(2.8rem, 13vw, 4rem); line-height: 1.0; margin-bottom: 1.25rem; }
-    .hero-sub { font-size: 0.875rem; max-width: 100%; margin-bottom: 2rem; line-height: 1.7; }
-    .hero-actions { flex-direction: column; align-items: stretch; gap: 0.75rem; }
-    .btn-primary { text-align: center; padding: 1rem 1.5rem; font-size: 0.78rem; }
+    /* HERO — photo first, text below, compact */
+    .hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: 55vw auto;
+      min-height: auto;
+    }
+    .hero-right {
+      grid-row: 1;
+      min-height: 55vw;
+      height: 55vw;
+    }
+    .hero-left {
+      grid-row: 2;
+      padding: 2rem 1.25rem 2.5rem;
+      justify-content: flex-start;
+      background: var(--linen);
+    }
+    .hero-eyebrow { margin-bottom: 0.75rem; font-size: 0.65rem; }
+    .hero-headline {
+      font-size: clamp(2rem, 10vw, 2.8rem);
+      line-height: 1.05;
+      margin-bottom: 0.9rem;
+    }
+    .hero-sub {
+      font-size: 0.85rem;
+      max-width: 100%;
+      margin-bottom: 1.5rem;
+      line-height: 1.65;
+    }
+    .hero-actions { flex-direction: column; align-items: stretch; gap: 0.6rem; }
+    .btn-primary { text-align: center; padding: 0.9rem 1.5rem; font-size: 0.75rem; }
     .btn-ghost { justify-content: center; font-size: 0.72rem; }
-    .hero-right { min-height: 60vw; }
     .hero-scroll { display: none; }
 
     /* STITCH DIVIDER */
@@ -1145,7 +1174,8 @@
 
   /* SMALL PHONES */
   @media (max-width: 375px) {
-    .hero-headline { font-size: 2.6rem; }
+    .hero-headline { font-size: 1.9rem; }
+    .hero-right { min-height: 58vw; height: 58vw; }
     .stitch-motif { font-size: 0.65rem; }
     .product-visual { aspect-ratio: 4/3; }
   }
@@ -1245,15 +1275,15 @@
       </div>
     </div>
 
-    <!-- Product 2: Crazy Plant Lady hoodie -->
+    <!-- Product 2: Erin Go Bragh hoodie -->
     <div class="product-item">
       <div class="product-visual">
-        <img src="https://raw.githubusercontent.com/mw1435/cloverandolive/main/images/crazy_plant_lady.jpg" alt="Red hoodie embroidered with a Crazy Plant Lady design" class="product-photo">
+        <img src="https://raw.githubusercontent.com/mw1435/cloverandolive/main/images/Erin%20go%20Bragh.png" alt="Cream hoodie embroidered with an Ireland map and Erin Go Bragh text" class="product-photo" style="object-position: center 40%;">
       </div>
       <div class="product-info">
         <p class="product-category">Hoodies</p>
         <h3 class="product-name">Custom text &amp; design</h3>
-        <p class="product-desc">Send us a phrase, a joke, or an idea. We digitise it and stitch it exactly as you imagined.</p>
+        <p class="product-desc">Send us a phrase, a design, or an idea. We digitise it and stitch it exactly as you imagined. Shown here: Erin Go Bragh.</p>
         <div class="product-price">€15 &nbsp;·&nbsp; €18 with initials</div>
         <a href="#contact" class="product-order">Order yours</a>
       </div>
@@ -1284,83 +1314,46 @@
     </div>
     <div class="school-grid">
 
-      <!-- School backpack -->
+      <!-- School bucket hat: Watergrasshill -->
       <div class="product-item school-item">
         <div class="product-visual">
-          <div class="school-placeholder">
-            <svg viewBox="0 0 160 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="30" y="55" width="100" height="100" rx="8" fill="#D4DDD5" stroke="#1C2B1E" stroke-width="1.5"/>
-              <path d="M55 55 Q55 35 80 35 Q105 35 105 55" stroke="#1C2B1E" stroke-width="1.5" fill="none"/>
-              <rect x="44" y="118" width="72" height="24" rx="3" fill="#E8E0D0" stroke="#1C2B1E" stroke-width="1"/>
-              <circle cx="80" cy="85" r="18" fill="none" stroke="#B5763A" stroke-width="1.5" stroke-dasharray="3 2"/>
-              <text x="80" y="81" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="9" fill="#1C2B1E" font-weight="400">CREST</text>
-              <text x="80" y="93" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="7" fill="#7A9B7C">HERE</text>
-              <text x="80" y="136" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="9" fill="#B5763A" letter-spacing="2">A.B.C.</text>
-            </svg>
-          </div>
-          <span class="product-badge school-badge">Schools</span>
-        </div>
-        <div class="product-info">
-          <p class="product-category">School bags</p>
-          <h3 class="product-name">School bag with crest</h3>
-          <p class="product-desc">Your school logo embroidered on a quality backpack, with your child's initials added. Never lost, never mixed up.</p>
-          <div class="product-price">€25 &nbsp;·&nbsp; €28 with initials</div>
-          <a href="#contact" class="product-order">Enquire now</a>
-        </div>
-      </div>
-
-      <!-- School bucket hat -->
-      <div class="product-item school-item">
-        <div class="product-visual">
-          <div class="school-placeholder">
-            <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="80" cy="115" rx="62" ry="10" fill="#D4DDD5" stroke="#1C2B1E" stroke-width="1.2"/>
-              <path d="M25 95 Q25 50 80 48 Q135 50 135 95 L135 115 Q135 120 80 122 Q25 120 25 115Z" fill="#D4DDD5" stroke="#1C2B1E" stroke-width="1.5"/>
-              <ellipse cx="80" cy="95" rx="35" ry="12" fill="#C8D4C9" stroke="#1C2B1E" stroke-width="1"/>
-              <circle cx="80" cy="75" r="16" fill="none" stroke="#B5763A" stroke-width="1.5" stroke-dasharray="3 2"/>
-              <text x="80" y="71" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8" fill="#1C2B1E">CREST</text>
-              <text x="80" y="82" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="6" fill="#7A9B7C">HERE</text>
-              <text x="80" y="106" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8" fill="#B5763A" letter-spacing="2">A.B.</text>
-            </svg>
-          </div>
+          <img src="https://raw.githubusercontent.com/mw1435/cloverandolive/main/images/Watergrasshill%20Bucket%20Hat.png" alt="Navy bucket hat embroidered with Watergrasshill NS school crest" class="product-photo" style="object-position: center 55%;">
           <span class="product-badge school-badge">Schools</span>
         </div>
         <div class="product-info">
           <p class="product-category">Bucket hats</p>
           <h3 class="product-name">School bucket hat</h3>
-          <p class="product-desc">Your school crest stitched onto a bucket hat, with initials if you want them. Great for PE days and yard time.</p>
+          <p class="product-desc">Your school crest stitched onto a bucket hat, with your child's initials on the back. Shown here: Watergrasshill NS.</p>
           <div class="product-price">€15 &nbsp;·&nbsp; €18 with initials</div>
           <a href="#contact" class="product-order">Enquire now</a>
         </div>
       </div>
 
-      <!-- School bundle -->
-      <div class="product-item school-item school-combo">
-        <div class="product-visual school-visual-combo">
-          <div class="school-placeholder school-placeholder-combo">
-            <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Hat left -->
-              <ellipse cx="65" cy="118" rx="42" ry="7" fill="#C8D4C9" stroke="#1C2B1E" stroke-width="1"/>
-              <path d="M24 102 Q24 70 65 68 Q106 70 106 102 L106 118 Q106 122 65 124 Q24 122 24 118Z" fill="#D4DDD5" stroke="#1C2B1E" stroke-width="1.2"/>
-              <circle cx="65" cy="88" r="13" fill="none" stroke="#B5763A" stroke-width="1.2" stroke-dasharray="2 2"/>
-              <text x="65" y="91" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="7" fill="#1C2B1E">CREST</text>
-              <!-- Bag right -->
-              <rect x="118" y="58" width="62" height="72" rx="5" fill="#D4DDD5" stroke="#1C2B1E" stroke-width="1.2"/>
-              <path d="M133 58 Q133 46 149 46 Q165 46 165 58" stroke="#1C2B1E" stroke-width="1.2" fill="none"/>
-              <rect x="126" y="102" width="46" height="16" rx="2" fill="#E8E0D0" stroke="#1C2B1E" stroke-width="0.8"/>
-              <circle cx="149" cy="82" r="11" fill="none" stroke="#B5763A" stroke-width="1.2" stroke-dasharray="2 2"/>
-              <text x="149" y="85" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="6" fill="#1C2B1E">CREST</text>
-              <text x="149" y="112" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="6" fill="#B5763A" letter-spacing="1.5">A.B.C.</text>
-              <!-- plus sign -->
-              <text x="112" y="97" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="18" fill="#7A9B7C" opacity="0.6">+</text>
-            </svg>
-          </div>
+      <!-- School bucket hat: Carrig -->
+      <div class="product-item school-item">
+        <div class="product-visual">
+          <img src="https://raw.githubusercontent.com/mw1435/cloverandolive/main/images/Carrig%20Bucket%20Hat.png" alt="Navy bucket hat embroidered with Scoil an Athar Tadhg school crest" class="product-photo" style="object-position: center 42%;">
+          <span class="product-badge school-badge">Schools</span>
+        </div>
+        <div class="product-info">
+          <p class="product-category">Bucket hats</p>
+          <h3 class="product-name">Any school, any crest</h3>
+          <p class="product-desc">We work with every school in Cork. Send us your crest and we handle the rest. Shown here: Scoil an Athar Tadhg.</p>
+          <div class="product-price">€15 &nbsp;·&nbsp; €18 with initials</div>
+          <a href="#contact" class="product-order">Enquire now</a>
+        </div>
+      </div>
+
+      <!-- School bag -->
+      <div class="product-item school-item">
+        <div class="product-visual">
+          <img src="https://raw.githubusercontent.com/mw1435/cloverandolive/main/images/giraffe_backpack.jpg" alt="Personalised embroidered school backpack" class="product-photo" style="object-position: center 20%;">
           <span class="product-badge" style="background: var(--copper);">Best value</span>
         </div>
         <div class="product-info">
           <p class="product-category">School bundle</p>
           <h3 class="product-name">Hat and bag together</h3>
-          <p class="product-desc">School crest and initials on both. Order together and we make sure everything matches perfectly.</p>
+          <p class="product-desc">School crest and initials on both the hat and the bag. Order together and we make sure everything matches perfectly.</p>
           <div class="product-price">€43 <span style="font-family:'DM Sans',sans-serif;font-size:0.7rem;color:var(--text-muted);margin-left:0.4rem;">the pair</span></div>
           <a href="#contact" class="product-order">Enquire now</a>
         </div>
@@ -1483,11 +1476,18 @@
         <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--forest);">hello@cloverandolive.ie</div>
       </div>
     </a>
-    <a href="https://cloverandolive.ie" style="display: flex; align-items: center; gap: 1rem; text-decoration: none;">
+    <a href="https://wa.me/353857311898" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 1rem; text-decoration: none;">
+      <span style="width: 40px; height: 40px; border: 1px solid var(--forest); display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">💬</span>
+      <div>
+        <div style="font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.2rem;">WhatsApp</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--forest);">085 731 1898</div>
+      </div>
+    </a>
+    <a href="https://www.instagram.com/cloverandoliveembroidery" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 1rem; text-decoration: none;">
       <span style="width: 40px; height: 40px; border: 1px solid var(--forest); display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">◎</span>
       <div>
-        <div style="font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.2rem;">Web</div>
-        <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--forest);">cloverandolive.ie</div>
+        <div style="font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.2rem;">Instagram</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--forest);">@cloverandoliveembroidery</div>
       </div>
     </a>
     <div style="display: flex; align-items: center; gap: 1rem;">
@@ -1538,9 +1538,9 @@
   <div class="footer-bottom">
     <span class="footer-copy">© 2025 Clover &amp; Olive Embroidery. All rights reserved.</span>
     <div class="footer-social">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">TikTok</a>
+      <a href="https://www.instagram.com/cloverandoliveembroidery" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/CloverAndOlive/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://wa.me/353857311898" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
 </footer>
