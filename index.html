@@ -38,14 +38,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    mix-blend-mode: multiply;
+    background: rgba(248, 246, 241, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--linen);
   }
 
   nav.scrolled {
     background: var(--off-white);
-    mix-blend-mode: normal;
     border-bottom: 1px solid var(--linen);
-    transition: background 0.3s ease;
   }
 
   .nav-logo {
@@ -248,16 +248,17 @@
   .stitch-line {
     flex: 1;
     height: 1px;
-    background: var(--linen);
+    background: #C8BFB0;
   }
 
   .stitch-motif {
     color: var(--copper);
-    font-size: 0.8rem;
-    letter-spacing: 0.3em;
-    opacity: 0.6;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    opacity: 1;
     white-space: nowrap;
     font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
   }
 
   /* ABOUT BAND */
@@ -349,8 +350,8 @@
     overflow: hidden;
   }
 
-  .product-item:nth-child(2) { margin-top: 3rem; }
-  .product-item:nth-child(3) { margin-top: -1.5rem; }
+  .product-item:nth-child(2) { margin-top: 0; }
+  .product-item:nth-child(3) { margin-top: 0; }
 
   .product-visual {
     aspect-ratio: 3/4;
@@ -856,8 +857,8 @@
 <section class="about-band" id="about">
   <span class="about-label">About us</span>
   <div class="about-text">
-    <p>Clover &amp; Olive is a Cork embroidery studio. Every piece is made to order. No stock sitting in a warehouse, no two orders quite the same.</p>
-    <p>We embroider hoodies and backpacks with names, initials, county pride, and the odd private joke. Most orders are gifts. Some are for a wedding, a first day of school, or a county final.</p>
+    <p>The name says it all. Clover for Ireland. Olive for Palestine. Two cultures, one stitch at a time.</p>
+    <p>The business was born from that connection. Every piece carries it forward, made to order in Cork for people who want something that means something.</p>
   </div>
 </section>
 
