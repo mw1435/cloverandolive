@@ -3,7 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clover & Olive Embroidery, Cork</title>
+<title>Clover &amp; Olive Embroidery Cork | Personalised Hoodies and Backpacks</title>
+<meta name="description" content="Personalised embroidered hoodies and backpacks made to order in Cork, Ireland. Names, initials, county crests and custom designs. From €15. Order yours today.">
+<meta name="keywords" content="personalised embroidery Cork, embroidered hoodie Ireland, personalised backpack Cork, custom embroidery Cork, embroidered gifts Ireland, county cork hoodie">
+<meta name="author" content="Clover and Olive Embroidery">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mw1435.github.io/cloverandolive/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mw1435.github.io/cloverandolive/">
+<meta property="og:title" content="Clover &amp; Olive Embroidery Cork | Personalised Hoodies and Backpacks">
+<meta property="og:description" content="Personalised embroidered hoodies and backpacks made to order in Cork, Ireland. Names, initials, county crests and custom designs. From €15.">
+<meta property="og:image" content="https://raw.githubusercontent.com/mw1435/cloverandolive/main/images/up_cork_full.jpg">
+<meta property="og:locale" content="en_IE">
+<meta property="og:site_name" content="Clover and Olive Embroidery">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clover &amp; Olive Embroidery Cork">
+<meta name="twitter:description" content="Personalised embroidered hoodies and backpacks made to order in Cork, Ireland.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/mw1435/cloverandolive/main/images/up_cork_full.jpg">
+
+<!-- Structured Data: Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Clover and Olive Embroidery",
+  "description": "Personalised embroidered hoodies and backpacks made to order in Cork, Ireland.",
+  "url": "https://mw1435.github.io/cloverandolive/",
+  "email": "hello@cloverandolive.ie",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cork",
+    "addressCountry": "IE"
+  },
+  "priceRange": "€15 to €43",
+  "currenciesAccepted": "EUR",
+  "openingHours": "Mo-Sa 09:00-18:00",
+  "sameAs": [
+    "https://www.instagram.com/cloverandolive",
+    "https://www.facebook.com/cloverandolive"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Embroidered Products",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Embroidered Bucket Hat",
+          "description": "Personalised embroidered bucket hat made to order in Cork"
+        },
+        "price": "15",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Embroidered Backpack",
+          "description": "Personalised embroidered backpack made to order in Cork"
+        },
+        "price": "25",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Hoodie and Backpack Bundle",
+          "description": "Matching embroidered hoodie and backpack with initials on both"
+        },
+        "price": "43",
+        "priceCurrency": "EUR"
+      }
+    ]
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -774,40 +854,92 @@
 
   /* MOBILE */
   @media (max-width: 768px) {
-    nav { padding: 1.2rem 1.5rem; }
+
+    /* NAV */
+    nav { padding: 1rem 1.25rem; }
     .nav-links { display: none; }
+    .nav-logo { font-size: 1rem; }
+    .nav-cta { font-size: 0.65rem; padding: 0.4rem 0.9rem; }
 
+    /* HERO */
     .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 8rem 1.5rem 3.5rem; }
-    .hero-right { min-height: 55vw; }
-    .hero-circle { width: 130px; height: 130px; }
+    .hero-left { padding: 7rem 1.25rem 3rem; }
+    .hero-headline { font-size: clamp(3rem, 14vw, 4.5rem); }
+    .hero-sub { font-size: 0.85rem; max-width: 100%; }
+    .hero-actions { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .btn-primary { width: 100%; text-align: center; padding: 1rem; }
+    .hero-right { min-height: 70vw; }
+    .hero-scroll { display: none; }
 
-    .about-band { grid-template-columns: 1fr; gap: 1rem; padding: 4rem 1.5rem; }
-    .products { padding: 3.5rem 1.5rem; }
-    .product-grid { grid-template-columns: 1fr; }
+    /* STITCH DIVIDER */
+    .stitch-divider { padding: 1.5rem 1.25rem; gap: 0.75rem; }
+    .stitch-motif { font-size: 0.75rem; letter-spacing: 0.12em; }
+    .stitch-line { display: none; }
+
+    /* ABOUT */
+    .about-band { grid-template-columns: 1fr; gap: 0.75rem; padding: 3rem 1.25rem; }
+    .about-label { font-size: 0.75rem; }
+    .about-text p { font-size: clamp(1.2rem, 5vw, 1.6rem); }
+    .about-text p + p { font-size: 0.85rem; }
+
+    /* PRODUCTS */
+    .products { padding: 3rem 1.25rem; }
+    .section-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; margin-bottom: 2rem; }
+    .product-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     .product-item:nth-child(2), .product-item:nth-child(3) { margin-top: 0; }
-    .bundle-strip { grid-template-columns: 1fr; margin-top: 2.5rem; }
-    .bundle-card { padding: 2.5rem 1.5rem; }
-    .bundle-photo { max-height: 320px; }
+    .product-visual { aspect-ratio: 4/3; }
+    .product-info { padding: 1.25rem 1.25rem 1.75rem; }
+    .product-name { font-size: 1.4rem; }
 
-    .process { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 1.5rem; }
+    /* BUNDLE STRIP */
+    .bundle-strip { grid-template-columns: 1fr; margin-top: 2rem; }
+    .bundle-card { padding: 2rem 1.25rem; order: 2; }
+    .bundle-photo { max-height: 280px; order: 1; }
+    .bundle-title { font-size: 1.8rem; }
+    .bundle-price { font-size: 1.5rem; }
+
+    /* PROCESS */
+    .process { grid-template-columns: 1fr; gap: 2rem; padding: 3.5rem 1.25rem; }
+    .process-title { font-size: clamp(1.7rem, 6vw, 2.2rem); margin-bottom: 2rem; }
     .process-steps { grid-template-columns: 1fr; gap: 2rem; }
+    .step-num { font-size: 2rem; }
 
-    .personal-cta { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
-    .testimonials-inner { grid-template-columns: 1fr; }
-    .testimonials { padding: 3.5rem 1.5rem; }
+    /* PERSONALISATION CTA */
+    .personal-cta { grid-template-columns: 1fr; padding: 3.5rem 1.25rem; gap: 0; }
+    .personal-cta-text { padding-bottom: 2.5rem; }
+    .personal-cta-title { font-size: clamp(2rem, 8vw, 2.8rem); }
+    .personal-cta-body { font-size: 0.875rem; max-width: 100%; }
+    .personal-cta-aside img { min-height: 280px !important; }
 
-    footer { grid-template-columns: 1fr 1fr; padding: 3rem 1.5rem 2rem; }
-    .footer-brand { grid-column: 1 / -1; }
+    /* WHAT WE CAN EMBROIDER */
+    section[style*="padding: 0 3rem"] { padding: 0 1.25rem 3rem !important; }
+    .aside-title { font-size: 1.2rem; }
+    .aside-items li { font-size: 0.85rem; }
+
+    /* TESTIMONIALS */
+    .testimonials { padding: 3rem 1.25rem; }
+    .testimonials-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .testimonial-quote { font-size: 1.1rem; }
+
+    /* CONTACT */
+    section#contact { grid-template-columns: 1fr !important; padding: 3.5rem 1.25rem !important; gap: 2rem !important; }
+
+    /* FOOTER */
+    footer { grid-template-columns: 1fr; padding: 3rem 1.25rem 2rem; gap: 2rem; }
+    .footer-brand { grid-column: auto; }
     .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+    .footer-social { justify-content: center; }
+  }
 
-    .stitch-divider { padding: 0 1.5rem; }
-    .section-header { flex-direction: column; gap: 1rem; }
+  /* SMALL PHONES */
+  @media (max-width: 390px) {
+    .hero-headline { font-size: 3rem; }
+    .stitch-motif { font-size: 0.68rem; }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .scroll-line { animation: none; }
-    .product-bg { transition: none; }
+    .product-photo { transition: none; }
   }
 </style>
 </head>
